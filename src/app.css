@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply bg-gray-300 dark:bg-gray-800 text-black dark:text-gray-100;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  min-height: 100vh;
+  place-items: flex-start;
+}
+
+#app {
+  margin: 0 auto;
+  max-width: 1280px;
+  text-align: center;
+  width: 100%;
+}
+
+button {
+  @apply bg-gray-900;
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0.6em 1.2em;
+  transition: border-color 0.25s;
+}
+
+.active-day-button {
+  @apply !bg-white text-purple-600 font-semibold cursor-default;
+}
+
+@media screen and (max-width: 530px) {
+  .day-table {
+    padding-bottom: 10px;
+  }
+
+  .day-table::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 4px;
+  }
+
+  .day-table::-webkit-scrollbar-thumb {
+    @apply bg-purple-400 dark:bg-purple-800;
+    border-radius: 4px;
+  }
+}

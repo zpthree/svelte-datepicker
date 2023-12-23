@@ -1,0 +1,9 @@
+tasks:
+  - before: |
+      git clone https://github.com/zpthree/gitpod-dotfiles.git /workspace/dotfiles
+      sh /workspace/dotfiles/base.sh
+      nvm install 18
+      nvm use 18
+      node /workspace/dotfiles/php/variables.js
+    init: npm i
+    command: zsh
